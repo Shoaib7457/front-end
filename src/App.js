@@ -31,7 +31,7 @@ function App() {
   // Function to handle resetting currentIndex to 0 using fetch
   const handleReset = async () => {
     try {
-      const response = await fetch('http://localhost:3000/reset-index', {
+      const response = await fetch('https://back-end-86wm.onrender.com/reset-index', {
         method: 'POST',
       });
       
