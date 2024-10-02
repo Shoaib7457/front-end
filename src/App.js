@@ -38,7 +38,9 @@ function App() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      
+      const resetPolyline = () => {
+      setPolylineLatLngs([]); // Clear the polyline's coordinates
+  };
       const data = await response.json();
       console.log(data.message); // Logs 'currentIndex reset to 0'
       setCurrentIndex(data.currentIndex); // Update currentIndex in state
@@ -47,21 +49,21 @@ function App() {
     }
   };
 
-  // Function to handle refreshing currentIndex using fetch
-  const handleRefresh = async () => {
-    try {
-      const response = await fetch('https://back-end-86wm.onrender.com/current-index');
+  // // Function to handle refreshing currentIndex using fetch
+  // const handleRefresh = async () => {
+  //   try {
+  //     const response = await fetch('https://back-end-86wm.onrender.com/current-index');
       
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+  //     if (!response.ok) {
+  //       throw new Error('Network response was not ok');
+  //     }
 
-      const data = await response.json();
-      setCurrentIndex(data.currentIndex); // Set the fetched currentIndex
-    } catch (error) {
-      console.error('Error fetching currentIndex:', error);
-    }
-  };
+  //     const data = await response.json();
+  //     setCurrentIndex(data.currentIndex); // Set the fetched currentIndex
+  //   } catch (error) {
+  //     console.error('Error fetching currentIndex:', error);
+  //   }
+  // };
 
   return (
     <div className="App">
