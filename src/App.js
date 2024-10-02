@@ -1,5 +1,7 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Polyline } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 import Map from './Map';
 
 function App() {
@@ -73,7 +75,7 @@ function App() {
     </div>
       {/* Adding new UI for Reset and Refresh */}
       <br />
-      <button onClick={handleReset}>Reset Index</button>
+      <button onClick={handleReset}>Reset</button>
 
       {/* Other elements/components of your existing App.js */}
     </div>
