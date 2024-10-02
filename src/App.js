@@ -1,5 +1,7 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Polyline } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 import Map from './Map';
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      
+      setPolylineLatLngs([]);
       const data = await response.json();
       console.log(data.message); // Logs 'currentIndex reset to 0'
       setCurrentIndex(data.currentIndex); // Update currentIndex in state
