@@ -70,9 +70,7 @@ function App() {
       <Map vehiclePosition={vehiclePosition} routePath={routePath} />
     </div>
       {/* Adding new UI for Reset and Refresh */}
-      <h2>Current Index: {currentIndex !== null ? currentIndex : 'N/A'}</h2>
-      <button onClick={handleRefresh}>Refresh</button>
-      <br /><br />
+      <br />
       <button onClick={handleReset}>Reset Index</button>
 
       {/* Other elements/components of your existing App.js */}
